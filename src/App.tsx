@@ -12,7 +12,11 @@ function App() {
   const onHandlePostMessage = useCallback(() => {
     const windowSDB = window?.SDB;
     if (windowSDB !== undefined) {
-      windowSDB?.postMessage(`{ key: "value"}`);
+      const obj = {
+        key: "value",
+      };
+
+      windowSDB?.postMessage(JSON.stringify(obj));
     }
   }, []);
 
