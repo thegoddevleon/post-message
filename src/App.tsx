@@ -12,7 +12,7 @@ function App() {
   const onHandlePostMessage = useCallback(() => {
     const windowSDB = window?.SDB;
     if (windowSDB !== undefined) {
-      windowSDB?.postMessage({ key: "value" });
+      windowSDB?.postMessage(`{ key: "value"}`);
     }
   }, []);
 
